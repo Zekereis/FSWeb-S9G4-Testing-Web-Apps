@@ -89,15 +89,15 @@ test('form gönderildiğinde girilen tüm değerler render ediliyor.', async () 
     
     const isimAlani = screen.getByTestId("isim-input");
     fireEvent.change(isimAlani, {target: {value:"zeker"}});
-    expect(isimAlani.value).toBe("zeker");
+    
 
     const soyadAlani = screen.getByTestId("soyad-input");
     fireEvent.change(soyadAlani, {target: {value:"reis"}});
-    expect(soyadAlani.value).toBe("reis");
+    
 
     const emailAlani = screen.getByTestId("email-input");
     fireEvent.change(emailAlani, {target: {value:"zeker@outlook.com"}});
-    expect(emailAlani.value).toBe("zeker@outlook.com");
+    
 
     const submitButton = screen.getByTestId("submit-button");
     fireEvent.click(submitButton);
